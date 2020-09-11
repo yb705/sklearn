@@ -1,0 +1,5 @@
+from sklearn.neighbors import KNeighborsClassifier#导入相关模型
+knn=KNeighborsClassifier(n_neighbors=1)#模型名称简化并设定相关系数
+X_train,X_test,y_train,y_test=train_test_split(iris_datatest["data"],iris_datatest["target"],randam_state=0)#划分数据集
+knn.fit(X_train,y_train)#建模
+print("该模型的精度评分:{:.2f}".format(knn.score(X_test,y_test)))#对模型的精度进行评分（.format是格式函数，：.2f是保留两位小数，f就是float）
